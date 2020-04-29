@@ -1,0 +1,73 @@
+/*TIP 1: Eerst plaats je alle CSS styling die "standaard" gaat gelden voor alle elementen (standaard daar bedoel ik mee in feite van 0px schermbreedte tot oneindig breed) daarna maak ik het scherm zo klein mogelijk en begin dan, terwijl ik het LANGZAAM groter maak, te ontdekken waar voor mij het design "breekt". En voor DIE "breekpunten" maak ik de CSS media queries met "alternatieve" styling! Die media queries vind je onderaan deze CSS file! */
+
+/** ---------------------------------------------------------------------- //
+*  @group: STANDAARD CSS  
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background: lightgrey;
+	font-size: 12px;
+	font-family: sans-serif;
+}
+
+section {
+	display: grid;
+	grid-gap: 2rem;
+	margin: 5rem;
+}
+
+article {
+	background: white;
+	padding: 2rem 2rem 4rem 2rem;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+	font-size: 2.5rem;
+	line-height: 1;
+	margin-bottom: 0.5rem;
+}
+
+article:nth-child(odd) {
+	transform: rotate(6deg);
+}
+
+/** ---------------------------------------------------------------------- //
+*  @group: VANAF HIER MEDIA QUERIES
+*/
+
+@media (min-width: 630px) {
+	section {
+		grid-template-columns: 1fr 1fr;
+	}
+	html {
+		font-size: 12px;
+	}
+}
+
+/* TIP 3: Hier een media query om de artikeltjes rood te maken: en dat alleen VAN 630px TOT 730px schermbreedte :-) */
+
+@media (min-width: 630px) and (max-width: 730px) {
+	article {
+		background: red;
+		color: white;
+	}
+}
+
+/* TIP 4: hier een media query om VANAF 960px vier kolommen naast elkaar te hebben. Ook laat ik nu handig alle artikelen nu verschaald "opblazen" tot oneindig. Op een TV in de woonkamer komt de site er dan zo uit te zien :-)
+
+Kun je ook ontdekken waarom ik dat voor elkaar heb gekregen door alleen maar 1.2vw op te geven voor de font grootte? */
+
+@media (min-width: 960px) {
+	section {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	html {
+		font-size: 1.2vw;
+	}
+}
