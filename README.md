@@ -1,7 +1,7 @@
 # Mobile first scalable layout with media queries
 
-Example of how to scale a layout from mobile to desktop (and larger) by figuring out when the layout "breaks" when resizing, and then placing your css media queries strategically. Note also the clever use of REM measurements for margins and paddings, relative to the global font-size!
+Example of how to scale a layout from mobile to desktop (and larger) by figuring out when/where the layout "breaks" when resizing, The dimensions (width in px) where your layout breaks will form the basis of your media queries in CSS. Note also the clever use of REM measurements for margins and paddings, relative to the global font-size!
 
-### Link naar online playground:
+### Play around with it for yourself online:
 
-[https://embed.plnkr.co/github/David-van-den-Bor/Oefening-css-grid](https://embed.plnkr.co/github/David-van-den-Bor/Oefening-css-grid?show=css,preview)
+[https://codesandbox.io/s/github/davidvandenbor/css-media-queries](https://codesandbox.io/s/github/davidvandenbor/css-media-queries)
